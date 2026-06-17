@@ -1,0 +1,77 @@
+:root {
+    --ink: #0E2027;
+    --panel: #1C2A33;
+    --panel-2: #1C2A33;
+    --signal: #1C3E47;
+    --signal-dim: #C97A33;
+    --signal-soft: rgba(255, 159, 64, 0.16);
+    --paper: #F4EFE4;
+    --ash: #92ABAF;
+    --bg: var(--ink);
+    --suface: var(--panel);
+    --suface-2: var(--panel-2);
+    --text: var(--paper);
+    --text-muted: var(--ash);
+    --line: rgba(244, 239, 228, 0.1);
+    --danger-soft: rgba(226, 103, 90, 0.14);
+    --success: #6FCF8E;
+    --shadow: 0 16px 40px rgba(4, 10, 13, 0.45);
+    --shadow-sm: 0 6px 16px rgba(4, 10, 13, 0.3);
+    --radius-lg: 18px;
+    --radius: 14px;
+    --radius-sm: 9px;
+    --front-display: "space grotesk", "Helvetica Neue", arial, sans-serif;
+    --front-body: "ibm plex sans", "Helvetica Neue", arial, sans-serif;
+    --front-mono: "ibm plex mono", "sfmono-regular",  monospace;
+}
+
+[data-theme="light"] {
+    --bg: #F6F1E5;
+    --surface: #FFFFFF;
+    --surface-2: #FBF7EC;
+    --text: #16252A;
+    --text-muted:  #5C6F73;
+    --line: rgba(14, 32, 39, 0.1);
+    --signal: #DC7E1E;
+    --signal-dim: #B8650F;
+    --signal-soft: rgba(220, 126, 30, 0.12);
+    --shadow: 0 14px 32px rgba(20, 30, 30, 0.12);
+    --shadow-sm:  0 6px 14px rgba(20, 30, 30, 0.08);
+}
+
+* { box-sizing: border-box; }
+html, body {height: 100%;}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--front-body);
+    font-size: 15.5px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+    h1,h2,h3{
+        font-family: var(--front-display);
+        margin: 0; letter-spacing: -0.01em;}
+        p{
+            margin: 0;
+        }
+        a{ color: inherrit; text-decoration: none; }
+        bottun{ font-family: inheirt;
+}
+input, textarea { font-family: inherit; color: inherit; }
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+::selection { background: var(--signal-soft); }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; border-radius: 4px; }
+
+
+
+
+
+    
