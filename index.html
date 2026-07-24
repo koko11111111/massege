@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة المصنع</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>لوحة تحكم المصنع</h1>
+  </header>
+
+  <main class="dashboard-container">
+    <!-- مواصفات الطلب -->
+    <section class="card">
+      <h2>مواصفات الطلب الحالي</h2>
+      <div class="grid-2">
+        <div><strong>كود القماش:</strong> <span id="fabric-code">---</span></div>
+        <div><strong>اللون:</strong> <span id="fabric-color">---</span></div>
+        <div><strong>القصة:</strong> <span id="cloth-cut">---</span></div>
+        <div><strong>الشكل:</strong> <span id="cloth-shape">---</span></div>
+      </div>
+    </section>
+
+    <!-- مخزون القماش -->
+    <section class="card">
+      <h2>مخزون القماش</h2>
+      <div class="metric-row">
+        <div class="metric">
+          <h3>إجمالي القماش (بالرول)</h3>
+          <p id="fabric-total">0 م</p>
+        </div>
+        <div class="metric">
+          <h3>القماش المتبقي</h3>
+          <p id="fabric-left" class="highlight-green">0 م</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- الإنتاج والمبيعات -->
+    <section class="card">
+      <h2>الإنتاج والمبيعات</h2>
+      <div class="metric-row">
+        <div class="metric">
+          <h3>تقدم الطلب</h3>
+          <p id="order-progress">0 / 0</p>
+          <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="metric">
+          <h3>إجمالي المباع</h3>
+          <p id="total-sold" class="highlight-blue">0 قطعة</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- نموذج التحديث -->
+    <section class="card">
+      <h2>تحديث التقدم اليومي</h2>
+      <form id="update-form" class="update-form">
+        <div class="form-group">
+          <label for="add-fabric">القماش المستخدم (متر)</label>
+          <input type="number" id="add-fabric" min="0" step="0.1" placeholder="مثال: 20.5">
+        </div>
+        <div class="form-group">
+          <label for="add-completed">القطع المصنعة</label>
+          <input type="number" id="add-completed" min="0" placeholder="مثال: 50">
+        </div>
+        <div class="form-group">
+          <label for="add-sold">القطع المباعة</label>
+          <input type="number" id="add-sold" min="0" placeholder="مثال: 10">
+        </div>
+        <button type="submit" class="primary-btn">حفظ</button>
+      </form>
+      <div style="margin-top: 16px; text-align: left;">
+        <button id="reset-btn" class="outline-btn">إعادة تعيين بيانات الطلب</button>
+      </div>
+    </section>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>

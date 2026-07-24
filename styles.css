@@ -1,0 +1,139 @@
+/* Form Styles */ 
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  color: #333;
+}
+.app-header {
+  background-color: #111;
+  color: #fff;
+  padding: 16px 24px;
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.dashboard-container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.metric-row {
+  display: flex;
+  gap: 24px;
+}
+.metric {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+.metric h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+.metric p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.highlight-green { color: #25D366; }
+.highlight-blue { color: #007BFF; }
+
+.progress-bar-container {
+  background: #e0e0e0;
+  border-radius: 4px;
+  height: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: #25D366;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Form Styles */
+.update-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+  margin-top: 10px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 13px;
+  color: #555;
+  font-weight: 600;
+}
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.primary-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  height: 40px;
+  transition: background 0.2s;
+}
+.primary-btn:hover {
+  background: #333;
+}
+.outline-btn {
+  background: transparent;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+.outline-btn:hover {
+  background: #ffebee;
+}
+
+@media (max-width: 650px) {
+  .update-form {
+    grid-template-columns: 1fr;
+  }
+  .primary-btn {
+    width: 100%;
+  }
+}
